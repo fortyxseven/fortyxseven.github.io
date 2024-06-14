@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calcul de la moyenne universitaire semestrielle</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <h1>Calcul de la moyenne universitaire semestrielle</h1>
+
+  <!-- Buttons to switch between S1 and S2 -->
+  <div class="switch-buttons">
+    <button class="btn" onclick="showForm('S1')">Semestre 1</button>
+    <button class="btn" onclick="showForm('S2')">Semestre 2</button>
+  </div>
+
+  <!-- S1 Form -->
+  <form id="gradeFormS1" class="form-container">
+    <div class="input-container">
+      <h2>Unité coeff 3</h2>
+      <label class="label" for="maths_S1">Math 3:</label>
+      <input class="input" type="number" id="maths_S1" name="maths" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="Mécanique_S1">M.Analytique:</label>
+      <input class="input" type="number" id="Mécanique_S1" name="Mécanique" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <h2>Unité coeff 2</h2>
+      <label class="label" for="optique_S1">Optique:</label>
+      <input class="input" type="number" id="optique_S1" name="optique" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="VOM_S1">V.O.M:</label>
+      <input class="input" type="number" id="VOM_S1" name="VOM" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="MNA_S1">Méthode Numérique Analytique:</label>
+      <input class="input" type="number" id="MNA_S1" name="MNA" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="probastat_S1">Proba-stat:</label>
+      <input class="input" type="number" id="probastat_S1" name="probastat" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <h2>Unité coeff 1</h2>
+      <label class="label" for="tpvom_S1">TP V.O.M:</label>
+      <input class="input" type="number" id="tpvom_S1" name="tpvom" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="tpoptique_S1">TP Optique:</label>
+      <input class="input" type="number" id="tpoptique_S1" name="tpoptique" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="anglais_S1">Anglais:</label>
+      <input class="input" type="number" id="anglais_S1" name="anglais" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <button class="btn" type="submit">Calculer</button>
+    </div>
+  </form>
+
+  <!-- S2 Form -->
+  <form id="gradeFormS2" class="form-container" style="display: none;">
+    <div class="input-container">
+      <h2>Unité coeff 3</h2>
+      <label class="label" for="THERMO_S2">Thermodynamique:</label>
+      <input class="input" type="number" id="THERMO_S2" name="THERMO" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <h2>Unité coeff 2</h2>
+      <label class="label" for="maths_S2">Math 4:</label>
+      <input class="input" type="number" id="maths_S2" name="maths" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="QUANTIQUE_S2">M.Quantique:</label>
+      <input class="input" type="number" id="QUANTIQUE_S2" name="QUANTIQUE" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="ELM_S2">Électromagnétisme:</label>
+      <input class="input" type="number" id="ELM_S2" name="ELM" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="MDF_S2">MDF:</label>
+      <input class="input" type="number" id="MDF_S2" name="MDF" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="ELN_S2">Électronique:</label>
+      <input class="input" type="number" id="ELN_S2" name="ELN" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="ASTROPHY_S2">Découverte:</label>
+      <input class="input" type="number" id="ASTROPHY_S2" name="ASTROPHY" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <h2>Unité coeff 1</h2>
+      <label class="label" for="tpthermo_S2">TP Thermodynamique:</label>
+      <input class="input" type="number" id="tpthermo_S2" name="tpthermo" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <label class="label" for="anglais_S2">Anglais:</label>
+      <input class="input" type="number" id="anglais_S2" name="anglais" placeholder="Entrer la note" max="20" step="0.01" required>
+
+      <button class="btn" type="submit">Calculer</button>
+    </div>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
