@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Moyenne LIC.PHY L2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-calculator"></i> Calculateur de Moyenne LIC.PHY L2</h1>
+        
+        <div class="semester-switch">
+            <button class="sem-btn active" data-semester="S3">Semestre 3</button>
+            <button class="sem-btn" data-semester="S4">Semestre 4</button>
+        </div>
+
+        <form id="semesterForm" class="form-container"></form>
+
+        <div id="resultContainer" class="result-container">
+            <div class="result-card">
+                <h2><i class="fas fa-chart-line"></i> Résultats</h2>
+                <div class="results-display">
+                    <div class="result-box">
+                        <span class="result-label">Moyenne Semestre</span>
+                        <span id="averageValue" class="result-number">0.00</span>
+                    </div>
+                    <div class="result-box">
+                        <span class="result-label">Crédits Obtenus</span>
+                        <span id="totalCredits" class="result-number">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<footer>
+        <p>&copy; 2025 Lotfi.</p>
+    </footer>
+    <script src="script.js"></script>
+	
+</body>
+</html>
