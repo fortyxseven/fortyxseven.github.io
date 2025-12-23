@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculateur de Moyenne LIC.PHY L2</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateur Universitaire</title>
+  
+
+  <link rel="stylesheet" href="style.css">
+  
+
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1><i class="fas fa-calculator"></i> Calculateur de Moyenne LIC.PHY L2</h1>
+
+  <div class="container">
+    <header>
+      <h1>Calculateur Universitaire</h1>
+      <p class="subtitle">Sélectionnez votre parcours</p>
+    </header>
+
+    <div class="glass-card">
+      
+      <!-- 1. TEMPLATE SWITCHER -->
+      <div class="template-switcher">
+        <button class="tpl-btn active" data-template="L2.PHY">L2.PHY</button>
+        <button class="tpl-btn" data-template="L3.PHY-ENG">L3.PHY-ENG</button>
+        <button class="tpl-btn" data-template="Custom">Custom</button>
+      </div>
+
+      <!-- 2. SEMESTER SWITCHER -->
+      <div class="switcher" id="semester-switcher">
+        <button class="switch-btn active" data-semestre="S1" type="button">Semestre 1</button>
+        <button class="switch-btn" data-semestre="S2" type="button">Semestre 2</button>
+      </div>
+
+      <div id="form-container">
         
-        <div class="semester-switch">
-            <button class="sem-btn active" data-semester="S3">Semestre 3</button>
-            <button class="sem-btn" data-semester="S4">Semestre 4</button>
-        </div>
-
-        <form id="semesterForm" class="form-container"></form>
-
-        <div id="resultContainer" class="result-container">
-            <div class="result-card">
-                <h2><i class="fas fa-chart-line"></i> Résultats</h2>
-                <div class="results-display">
-                    <div class="result-box">
-                        <span class="result-label">Moyenne Semestre</span>
-                        <span id="averageValue" class="result-number">0.00</span>
-                    </div>
-                    <div class="result-box">
-                        <span class="result-label">Crédits Obtenus</span>
-                        <span id="totalCredits" class="result-number">0</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
+   
+      <div class="actions" id="action-buttons">
+        <button class="btn btn-clear" id="btn-clear" type="button">Effacer</button>
+        <button class="btn btn-calc" id="btn-calc" type="button">Calculer</button>
+      </div>
     </div>
-	<footer>
-        <p>&copy; 2025 Lotfi.</p>
-    </footer>
-    <script src="script.js"></script>
-	
+
+    <div id="result-container" class="glass-card">
+      <div class="total-average">
+        <span>Moyenne Générale</span>
+        <span id="final-score" class="big-score">--</span>
+        <div id="verdict" style="margin-bottom: 10px; font-weight: bold;"></div>
+        <div id="credits-display" class="credits-info">Crédits: -- / 30</div>
+      </div>
+      
+      <div id="details-section">
+          <div class="ue-title" style="justify-content: center; margin-top: 20px;">Détails</div>
+          <div class="details-grid" id="details-grid">
+			  
+          </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
