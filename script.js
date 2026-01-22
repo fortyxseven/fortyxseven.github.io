@@ -66,16 +66,16 @@ const programsData = {
       {
         name: "UE Méthodologie (UEM)",
         modules: [
-          { id: "mna1", label: "MNA 1", coef: 2, credit: 4 },
-          { id: "tp_thermo_l3", label: "TP THERMO", coef: 1, credit: 2 },
-          { id: "phys_stat", label: "Physique statistique", coef: 1, credit: 2 }
+          { id: "mna1", label: "MNA 1", coef: 2, credit: 3 },
+          { id: "tp_thermo_l3", label: "TP THERMO", coef: 2, credit: 3 },
+          { id: "phys_stat", label: "Physique statistique", coef: 2, credit: 3 }
         ]
       },
       {
         name: "UE Découverte & Transversale",
         modules: [
           { id: "phys_semi", label: "Physique semi-conducteurs", coef: 1, credit: 2 },
-          { id: "entreprenariat", label: "Entreprenariat", coef: 1, credit: 2 }
+          { id: "entreprenariat", label: "Entreprenariat", coef: 1, credit: 1 }
         ]
       }
     ],
@@ -107,7 +107,7 @@ const programsData = {
   }
 };
 
-let currentTemplate = 'L2.PHY'; // Default
+let currentTemplate = 'L2.PHY';
 let currentSemester = 'S1';
 let customModuleCount = 5;
 
@@ -129,7 +129,7 @@ function setupEventListeners() {
     });
   });
 
-
+  
   document.querySelectorAll('.switch-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const sem = e.target.getAttribute('data-semestre');
@@ -169,7 +169,7 @@ function switchTemplate(tpl, btnElement) {
     const actions = document.getElementById('action-buttons');
     const result = document.getElementById('result-container');
     
-    // Hide result on switch
+
     result.style.display = 'none';
     document.body.classList.remove('custom-mode');
 
@@ -188,7 +188,7 @@ function switchTemplate(tpl, btnElement) {
 }
 
 function switchSemester(sem, btnElement) {
-  if(currentTemplate === 'Custom') return; // Safety
+  if(currentTemplate === 'Custom') return;
 
   currentSemester = sem;
 
@@ -537,3 +537,4 @@ function displayResult(average, ueDetails, credits) {
   resultContainer.style.display = 'block';
   resultContainer.scrollIntoView({ behavior: 'smooth' });
 }
+
